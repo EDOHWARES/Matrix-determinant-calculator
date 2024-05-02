@@ -8,7 +8,7 @@ import Error from './pages/Error';
 import { createContext, useContext, useState } from 'react';
 const MatrixContext = createContext();
 function App() {
-  const [matrixDimension, setMatrixDimension] = useState(2)
+  const [matrixDimension, setMatrixDimension] = useState(JSON.parse(localStorage.getItem('type')));
 
   const handleMatrixDimension = (dimension) => {
     setMatrixDimension((prevState) => {
