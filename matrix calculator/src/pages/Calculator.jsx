@@ -115,14 +115,14 @@ const clear = () => {
         <div className='flex items-center gap-5 border border-transparent pl-2 border-l-lightGray/30'>
           <span className='text-3xl text-lightGray'>det</span>
           <div className='border relative border-none'>
-            <span className='absolute bg-deepBlue right-7 w-[80%] h-[1rem] -top-2'></span>
+            <span className='absolute bg-deepBlue right-3 sm:right-5 w-[80%] h-[1rem] -top-2'></span>
             {grid == 2 ? <div id='box-container' className={`grid grid-rows-2 grid-cols-2 gap-4 border border-lightGray p-4`}>
               {boxes}
             </div>:
             <div id='box-container' className={`grid grid-rows-3 grid-cols-3 gap-4 border border-lightGray p-4`}>
               {boxes}
             </div>}
-            <span className='absolute bg-deepBlue right-7 w-[80%] h-[1rem] -bottom-2'></span>
+            <span className='absolute bg-deepBlue right-3 sm:right-5 w-[80%] h-[1rem] -bottom-2'></span>
           </div>
           <div className='flex items-center gap-5'>
             <span className='text-lightGray text-3xl'>=</span>

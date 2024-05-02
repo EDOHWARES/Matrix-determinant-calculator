@@ -5,8 +5,8 @@ import { VscDebugContinue } from "react-icons/vsc";
 
 const Welcome = () => {
   return (
-    <section className='w-full p-3 h-screen bg-deepBlue flex align-items-center  justify-center'>
-      <div className='bg-white px-3 py-5 sm:py-10 sm:p-10 text-center w-fit sm:w-[70%] md:w-[60%] h-fit my-auto rounded-md flex flex-col align-items-center justify-between shadow-md'>
+    <section className='h-screen w-full p-3 bg-deepBlue flex align-items-center  justify-center'>
+      <div className='bg-slate-100 px-3 py-5 sm:py-10 sm:p-10 text-center w-fit sm:w-[70%] md:w-[60%] h-fit my-auto rounded-md flex flex-col align-items-center justify-between shadow-md'>
         <div className='flex flex-col gap-6'>
           <h1 className='font-bold text-sm sm:text-3xl text-deepBlue'>Welcome to <i>EDOHWARES</i> Determinant Calculator</h1>
           <p className='text-gray-500 text-[10px] sm:text-sm'>

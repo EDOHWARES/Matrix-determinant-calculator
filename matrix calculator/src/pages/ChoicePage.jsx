@@ -33,9 +33,9 @@ const ChoicePage = () => {
 
   return (
     <section className='w-full p-3 h-screen bg-deepBlue flex align-items-center  justify-center'>
-      <div className='bg-white text-sm px-3 py-5 sm:p-10 text-center w-fit sm:w-[70%] md:w-[60%] h-fit my-auto rounded-md flex flex-col align-items-center justify-between shadow-md'>
+      <div className='bg-slate-100 text-sm px-3 py-5 sm:p-10 text-center w-fit sm:w-[70%] md:w-[60%] h-fit my-auto rounded-md flex flex-col align-items-center justify-between shadow-md'>
         <div className='flex flex-col gap-6'>
-          <p className='text-red-400'>
+          <p className='text-red-300'>
             <em>Note:</em> This project is still under construction, so for now you'll only be able to access the 2X2 Matrix and 3X3 Matrix.There'll also be an integration of a program that calculates the minor of a matrix in the next update.
           </p>
           <select 
