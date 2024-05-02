@@ -27,15 +27,15 @@ const ChoicePage = () => {
 
   return (
     <section className='w-full h-screen bg-deepBlue flex align-items-center  justify-center'>
-      <div className='bg-white p-10 text-center w-[70%] md:w-[60%] h-[75%] md:h-[40%] my-auto rounded-md flex flex-col align-items-center justify-between shadow-md'>
+      <div className='bg-white text-sm px-3 py-5 sm:p-10 text-center w-[70%] md:w-[60%] h-fit md:h-[40%] my-auto rounded-md flex flex-col align-items-center justify-between shadow-md'>
         <div className='flex flex-col gap-6'>
-          <p className='text-red-600'>
+          <p className='text-red-400'>
             <em>Note:</em> This project is still under construction, so for now you'll only be able to access the 2X2 Matrix and 3X3 Matrix.There'll also be an integration of a program that calculates the minor of a matrix in the next update.
           </p>
           <select 
           name="type-of-det" 
           id="type" 
-          className='matrix-type p-3 text-center w-[50%] mx-auto outline-none border-none outline-deepBlue rounded-md'
+          className='matrix-type p-1 sm:p-3 text-center w-[50%] mx-auto outline-none border-none outline-deepBlue rounded-md'
           onChange={getValue}
           >
             <option value="2" className='m-5'>2X2 Matrix</option>
@@ -44,7 +44,7 @@ const ChoicePage = () => {
           </select>
         </div>
         
-        <button onClick={handleNavigation} className='bg-gold flex gap-1 justify-content-center  px-10 py-5 align-items-center font-semibold text-deepBlue rounded-md w-fit text-1xl mx-auto hover:scale-95 duration-500'><span>OK</span><GrLinkNext className='my-auto'/></button>
+        <button onClick={handleNavigation} className='bg-gold mt-8 flex gap-1 justify-content-center px-5 py-3 sm:px-10 sm:py-5 align-items-center font-semibold text-deepBlue rounded-md w-fit text-[.5rem] sm:text-xl mx-auto hover:scale-95 duration-500'><span>OK</span><GrLinkNext className='my-auto'/></button>
       </div>
     </section>
   )

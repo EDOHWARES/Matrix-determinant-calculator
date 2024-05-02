@@ -4,7 +4,7 @@ import { useMatrixDimension } from '../App';
 
 const Box = () => {
   return (
-    <input type='number' className='w-[5rem] h-[5rem] bg-lightGray text-2xl text-center'/>
+    <input type='number' className='h-[2rem] w-[2rem] sm:w-[5rem] sm:h-[5rem] bg-lightGray text-sm sm:text-2xl text-center'/>
   )
 }
 
@@ -111,8 +111,8 @@ const clear = () => {
   
 
   return (
-    <section className='w-full relative h-screen bg-deepBlue flex align-items-center justify-between'>
-      <Link to={'/choice'} className='absolute top-8 left-4 border border-gold px-5 py-3 text-lightGray font-semibold hover:scale-95 duration-500'>GO BACK</Link>
+    <section className='w-full relative p-3 h-screen bg-deepBlue flex align-items-center justify-between'>
+      <Link to={'/choice'} className='absolute top-8 left-4 border border-gold px-3 py-1 sm:px-5 sm:py-3 text-lightGray text-sm sm:text-xl sm:font-semibold hover:scale-95 duration-500'>GO BACK</Link>
       <div className='my-auto mx-auto'>
         <div className='flex items-center gap-5 border border-transparent pl-2 border-l-lightGray/30'>
           <span className='text-3xl text-lightGray'>det</span>
@@ -128,16 +128,16 @@ const clear = () => {
           </div>
           <div className='flex items-center gap-5'>
             <span className='text-lightGray text-3xl'>=</span>
-            <input className='the-answer w-[5rem] h-[5rem] text-2xl text-center text-deepBlue p-1 font-semibold' type="number" name="answer" readOnly value={result} />
+            <input className='the-answer h-[3.5rem] w-[3.5rem] sm:w-[5rem] sm:h-[5rem] text-xl sm:text-2xl text-center text-deepBlue p-1 font-semibold' type="number" name="answer" readOnly value={result} />
           </div>
         </div>
         <div className='mt-10 mx-auto w-full flex items-start justify-between border border-transparent border-l-lightGray/30 pl-2'>
           <button 
           onClick={compute}
-          className='bg-gold text-deepBlue font-semibold text-2xl px-5 py-3 hover:scale-95 duration-500'>COMPUTE</button>
+          className='bg-gold text-deepBlue sm:font-semibold text-sm sm:text-2xl px-2 sm:px-5 py-2 sm:py-3 hover:scale-95 duration-500'>COMPUTE</button>
            <button 
            onClick={clear}
-          className='bg-red-500 text-white font-semibold text-2xl px-5 py-3 hover:scale-95 duration-500'>CLEAR</button>
+          className='bg-red-500 text-white sm:font-semibold text-sm sm:text-2xl p-2 sm:px-5 sm:py-3 hover:scale-95 duration-500'>CLEAR</button>
         </div>
       </div>
     </section>
