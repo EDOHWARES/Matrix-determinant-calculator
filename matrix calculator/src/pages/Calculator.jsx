@@ -18,8 +18,6 @@ const Calculator = () => {
       setGrid(matrixDimension);
     };
   };
-  console.log(matrixDimension);
-  console.log(grid)
 
   const [result, setResult] = useState('');
 
