@@ -10,7 +10,16 @@ const Box = () => {
 
 const Calculator = () => {
   const {matrixDimension} = useMatrixDimension();
+
+  const [grid, setGrid] = useState(matrixDimension);
+
+  window.onload = () => {
+    if (grid != matrixDimension) {
+      setGrid(matrixDimension);
+    };
+  };
   console.log(matrixDimension);
+  console.log(grid)
 
   const [result, setResult] = useState('');
 
@@ -109,9 +118,12 @@ const clear = () => {
           <span className='text-3xl text-lightGray'>det</span>
           <div className='border relative border-none'>
             <span className='absolute bg-deepBlue right-7 w-[80%] h-[1rem] -top-2'></span>
-            <div id='box-container' className={`grid grid-cols-${matrixDimension} gap-4 border border-lightGray p-4`}>
+            {grid == 2 ? <div id='box-container' className={`grid grid-rows-2 grid-cols-2 gap-4 border border-lightGray p-4`}>
               {boxes}
-            </div>
+            </div>:
+            <div id='box-container' className={`grid grid-rows-3 grid-cols-3 gap-4 border border-lightGray p-4`}>
+              {boxes}
+            </div>}
             <span className='absolute bg-deepBlue right-7 w-[80%] h-[1rem] -bottom-2'></span>
           </div>
           <div className='flex items-center gap-5'>
