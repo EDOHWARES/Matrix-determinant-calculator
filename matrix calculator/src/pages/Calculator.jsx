@@ -128,7 +128,7 @@ const clear = () => {
           </div>
           <div className='flex items-center gap-5'>
             <span className='text-lightGray text-3xl'>=</span>
-            <input className='the-answer h-[3.5rem] w-[3.5rem] sm:w-[5rem] sm:h-[5rem] text-xl sm:text-2xl text-center text-deepBlue p-1 font-semibold' type="number" name="answer" readOnly value={result} />
+            <input className='the-answer h-[3.5rem] w-[3.5rem] sm:w-[5rem] sm:h-[5rem] text-sm sm:text-2xl text-center text-deepBlue p-1 font-semibold' type="number" name="answer" readOnly value={result} />
           </div>
         </div>
         <div className='mt-10 mx-auto w-full flex items-start justify-between border border-transparent border-l-lightGray/30 pl-2'>
