@@ -4,7 +4,7 @@ import { useMatrixDimension } from '../App';
 
 const Box = () => {
   return (
-    <input type='number' className='h-[2rem] w-[2rem] sm:w-[5rem] sm:h-[5rem] bg-lightGray text-sm sm:text-2xl text-center'/>
+    <input max={'999'} min={'-999'} type='number' className='h-[2rem] w-[2rem] sm:w-[5rem] sm:h-[5rem] bg-lightGray text-sm sm:text-2xl text-center'/>
   )
 }
 
@@ -82,7 +82,11 @@ const Calculator = () => {
   // return an alert if any of the matrix entries is left void.
   for (let i=0; i < boxValues.length; i++) {
     if (boxValues[i] == '') {
-      alert('All Matrix entries must have a value');
+      alert('All Matrix entries must have a value and a valid one at that!');
+      return
+    } else if (boxValues[i].length > 3) {
+      alert('Entries must not contain more than 3 characters. Pls start over again...');
+      clear();
       return
     }
   }
@@ -90,7 +94,7 @@ const Calculator = () => {
   const r =  determinant(createArrayOfArrays(matrixDimension, boxValues));
 
   setResult((prevState) => {
-    return r;
+    return Math.round(r);
   })
 
 }
@@ -126,7 +130,7 @@ const clear = () => {
           </div>
           <div className='flex items-center gap-5'>
             <span className='text-lightGray text-3xl'>=</span>
-            <input className='the-answer h-[3.5rem] w-[3.5rem] sm:w-[5rem] sm:h-[5rem] text-sm sm:text-2xl text-center text-deepBlue p-1 font-semibold' type="number" name="answer" readOnly value={result} />
+            <input className='the-answer h-[3.5rem] w-fit min-w-[3.5rem] max-w-[4.5rem] sm:w-fit sm:min-w-[5rem] sm:max-w-[6.5rem] sm:h-[5rem] text-sm sm:text-2xl text-center text-deepBlue p-1 font-semibold' type="number" name="answer" readOnly value={result} />
           </div>
         </div>
         <div className='mt-10 mx-auto w-full flex items-start justify-between border border-transparent border-l-lightGray/30 pl-2'>
